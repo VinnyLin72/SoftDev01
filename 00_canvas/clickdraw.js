@@ -1,10 +1,3 @@
-```
-Vincent Lin
-SoftDev2 pd08
-K00 -- I See  Red Door...
-2019-1-31
-```
-
 var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
 var clearbtn = document.getElementById("cc");
