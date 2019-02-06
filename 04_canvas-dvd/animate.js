@@ -15,9 +15,7 @@ ctx.fillStyle = "#00ffff";
 
 //ctx.drawImage(logo, 0 ,0);
 
-var dvdLogoSetup = () =>{
-    window.cancelAnimationFrame(requestID);
-
+var dvdLogoSetup = () =>{    
     var rectWidth = 100;
     var rectHeight = 50;
 
@@ -31,7 +29,6 @@ var dvdLogoSetup = () =>{
     logo.src = "logo_dvd.jpg";
 
     var drawDvd = () =>{
-	window.cancelAnimationFrame(requestID);
 	clear();
 	ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
 
