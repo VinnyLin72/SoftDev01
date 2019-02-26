@@ -10,6 +10,7 @@ var stopButton = document.getElementById("stop");
 var growing = true;
 var requestID;
 var radius = 0;
+//ctx.fillStyle = "#00ffff";
 
 var clear = () =>{
     console.log("clear:", requestID);
@@ -17,7 +18,7 @@ var clear = () =>{
 };
 
 var drawDot = () =>{
-    requestID = window.requestAnimationFrame(drawDot);
+    window.cancelAnimationFrame(requestID);
     clear();
     // draw dot
     ctx.beginPath();
@@ -27,13 +28,16 @@ var drawDot = () =>{
     if (growing){
 	radius ++;
     }
-    else{radius --;}
+    else{
+	radius --;
+    }
     if (radius >= c.width/2){
 	growing = false;
     }
     else if(radius == 0){
 	growing = true;
     }
+    requestID = window.requestAnimationFrame(drawDot);
 };
 
 var stopIt = () =>{
